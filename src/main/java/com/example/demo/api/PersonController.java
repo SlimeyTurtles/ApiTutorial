@@ -56,4 +56,9 @@ public class PersonController {
     public void updatePerson(@PathVariable("id") UUID id, @Valid @NonNull @RequestBody Person personToUpdate) {
         personService.updatePerson(id, personToUpdate);
     } 
+
+    @PutMapping(path = "{id}")
+    public void addOrder(@PathVariable("id") UUID id, @Valid @NonNull @RequestBody Order order) {
+        personService.addOrder(id, order);
+    }
 }

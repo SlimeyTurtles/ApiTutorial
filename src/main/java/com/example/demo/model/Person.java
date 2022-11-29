@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -12,6 +14,8 @@ public class Person {
     
     @NotBlank
     private final String name;
+
+    private Map<String,Map<String, Object>> orders = new HashMap<>();
     
     public Person(        
             @JsonProperty("id") UUID id, 
